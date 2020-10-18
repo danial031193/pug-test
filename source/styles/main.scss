@@ -5,3 +5,34 @@
 img {
     width: 50px;
 }
+
+.title {
+    transition: all .3s;
+    //animation: spin 3s infinite;
+    display: inline-block;
+
+    &:hover {
+        transform: scale(3);
+        //transform: none;
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.border {
+    display: inline-block;
+    border: 50px solid transparent;
+    border-top-color: aquamarine;
+    transition: all .3s;
+
+    &:hover {
+        transform: rotate(180deg);
+    }
+}
