@@ -1,0 +1,14 @@
+mixin resumeItem(type)
+    .resume__item
+        img(src='../img/resume/' + type + '/icon.svg')
+        img(src='../img/resume/' + type + '/text.png')
+
+section.resume#resume
+    .container
+        +sectionTitle('Ваше будущее резюме')
+        .resume__wrapper
+            .resume__items
+              each type in ['html', 'css', 'js']
+                  +resumeItem(type)
+            .resume__cv
+                img(src='../img/resume/cv.png')
